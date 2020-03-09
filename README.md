@@ -229,7 +229,7 @@ struct point {
 
 进行了压力测试，随机使用1000个直线，验证耗时60000，通过。
 
-<https://github.com/804035184/IntersectionProject/blob/master/image/3.png>
+![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/3.png)
 
 ## 关键代码说明
 
@@ -397,11 +397,11 @@ point_2 node_cc(circle c1, circle c2) {
 
 对10000条直线进行运算
 
-<https://github.com/804035184/IntersectionProject/blob/master/image/1.png>
+![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/1.png)
 
 #### 函数
 
-<https://github.com/804035184/IntersectionProject/blob/master/image/2.png>
+![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/2.png)
 
 发现绝大多数运算都是在set进行排序操作。
 
