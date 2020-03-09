@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  IntersectProjectTest.cpp
+C:\Users\Lenovo\source\repos\IntersectProject\IntersectProjectTest\IntersectProjectTest.cpp(50,14): warning C4244:  “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+    正在创建库 C:\Users\Lenovo\source\repos\IntersectProject\Release\IntersectProjectTest.lib 和对象 C:\Users\Lenovo\source\repos\IntersectProject\Release\IntersectProjectTest.exp
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 838 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  IntersectProjectTest.vcxproj -> C:\Users\Lenovo\source\repos\IntersectProject\Release\IntersectProjectTest.dll
