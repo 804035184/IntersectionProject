@@ -226,8 +226,10 @@ struct point {
 ## 单元测试
 
 进行了正确性测试。编写本机单元测试，对求交点的方法进行了正确性测试。
-
-进行了压力测试，随机使用1000个直线，验证耗时60000，通过。
+对每个计算的方法进行了正确性测试。
+进行了压力测试，随机使用1000个直线，验证耗时60000。
+对附加题进行了正确性测试。
+对于超出1000进行了测试，但遗憾的是500000条在60秒内并不能给出结果。
 
 ![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/3.png)
 
@@ -314,8 +316,14 @@ point_2 node_lc(line lin1, circle cir1) {
 		(2 * b * b * x - 2 * c * a - 2 * b * y * a) - 4 *
 			(a * a + b * b) * (b * b * x * x + c * c + 2 *
 				b * y * c + b * b * y * y - r * r * b * b))) / (2 * (a * a + b * b));
-	y1 = (-c - a * x1) / b;
-	y2 = (-c - a * x2) / b;
+	if (!equals(b, 0)) {
+		y1 = (-c - a * x1) / b;
+		y2 = (-c - a * x2) / b;
+	}
+	else {
+		y1 = y + sqrt(r * r - (x1 - x) * (x1 - x));
+		y2 = y - sqrt(r * r - (x1 - x) * (x1 - x));
+	}
 	point_2 pt;
 	point pt1;
 	point pt2;
@@ -375,8 +383,14 @@ point_2 node_cc(circle c1, circle c2) {
 		(2 * b * b * x - 2 * c * a - 2 * b * y * a) - 4 *
 			(a * a + b * b) * (b * b * x * x + c * c + 2 *
 				b * y * c + b * b * y * y - r * r * b * b))) / (2 * (a * a + b * b));
-	y1 = (-c - a * x1) / b;
-	y2 = (-c - a * x2) / b;
+	if (!equals(b, 0)) {
+		y1 = (-c - a * x1) / b;
+		y2 = (-c - a * x2) / b;
+	}
+	else {
+		y1 = y + sqrt(r * r - (x1 - x) * (x1 - x));
+		y2 = y - sqrt(r * r - (x1 - x) * (x1 - x));
+	}
 	point_2 pt;
 	point pt1;
 	point pt2;
@@ -412,4 +426,10 @@ point_2 node_cc(circle c1, circle c2) {
 遍历时每个图形不需要对其他的进行遍历，只需遍历剩下的，虽然没变复杂度，可以减少很多运算
 
 在读入时就对之前的进行计算可能会提升一点点效率
+
+### 消除所有警告的截图
+
+![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/xc1.png)
+
+![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/xc2.png)
 

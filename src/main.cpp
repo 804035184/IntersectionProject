@@ -98,8 +98,14 @@ point_2 node_lc(line lin1, circle cir1) {
 		(2 * b * b * x - 2 * c * a - 2 * b * y * a) - 4 *
 			(a * a + b * b) * (b * b * x * x + c * c + 2 *
 				b * y * c + b * b * y * y - r * r * b * b))) / (2 * (a * a + b * b));
-	y1 = (-c - a * x1) / b;
-	y2 = (-c - a * x2) / b;
+	if (!equals(b, 0)) {
+		y1 = (-c - a * x1) / b;
+		y2 = (-c - a * x2) / b;
+	}
+	else {
+		y1 = y + sqrt(r * r - (x1 - x) * (x1 - x));
+		y2 = y - sqrt(r * r - (x1 - x) * (x1 - x));
+	}
 	point_2 pt;
 	point pt1;
 	point pt2;
@@ -148,8 +154,14 @@ point_2 node_cc(circle c1, circle c2) {
 		(2 * b * b * x - 2 * c * a - 2 * b * y * a) - 4 *
 			(a * a + b * b) * (b * b * x * x + c * c + 2 *
 				b * y * c + b * b * y * y - r * r * b * b))) / (2 * (a * a + b * b));
-	y1 = (-c - a * x1) / b;
-	y2 = (-c - a * x2) / b;
+	if (!equals(b, 0)) {
+		y1 = (-c - a * x1) / b;
+		y2 = (-c - a * x2) / b;
+	}
+	else {
+		y1 = y + sqrt(r * r - (x1 - x) * (x1 - x));
+		y2 = y - sqrt(r * r - (x1 - x) * (x1 - x));
+	}
 	point_2 pt;
 	point pt1;
 	point pt2;
