@@ -433,3 +433,5 @@ point_2 node_cc(circle c1, circle c2) {
 
 ![Alt text](https://github.com/804035184/IntersectionProject/blob/master/image/xc2.png)
 
+
+
